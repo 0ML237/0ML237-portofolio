@@ -99,14 +99,28 @@ const Hero = () => {
             initial={{ scale: 0.9, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 0.8, type: "spring" }}
-            className="text-4xl md:text-6xl lg:text-7xl font-black tracking-tighter text-transparent relative z-10"
-            style={{
-              WebkitTextStroke: "1px rgba(var(--primary), 0.8)", // Dynamic stroke
-              textShadow: "0 0 20px rgba(var(--primary), 0.5), 0 0 40px rgba(var(--primary), 0.3)"
-            }}
+            className="text-4xl md:text-6xl lg:text-7xl font-black tracking-tighter relative z-10"
           >
-            <span className="block md:inline hover:text-primary/10 transition-colors duration-500 cursor-default" style={{ WebkitTextStroke: "1px var(--primary)" }}>MARCUS</span>
-            <span className="block md:inline md:ml-4 hover:text-secondary/10 transition-colors duration-500 cursor-default" style={{ WebkitTextStrokeColor: "var(--secondary)" }}>TEMGOUA</span>
+            <span 
+              className="block md:inline hover:scale-105 transition-transform duration-500 cursor-default"
+              style={{ 
+                color: "#f5f5f5",
+                textShadow: "0 0 30px rgba(239, 68, 68, 0.6), 0 0 60px rgba(239, 68, 68, 0.4)",
+                filter: "drop-shadow(0 0 10px rgba(239, 68, 68, 0.5))"
+              }}
+            >
+              MARCUS
+            </span>
+            <span 
+              className="block md:inline md:ml-4 hover:scale-105 transition-transform duration-500 cursor-default"
+              style={{ 
+                color: "#f5f5f5",
+                textShadow: "0 0 30px rgba(236, 72, 153, 0.6), 0 0 60px rgba(236, 72, 153, 0.4)",
+                filter: "drop-shadow(0 0 10px rgba(236, 72, 153, 0.5))"
+              }}
+            >
+              TEMGOUA
+            </span>
           </motion.h1>
         </div>
 

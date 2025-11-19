@@ -10,15 +10,29 @@ const Experience = () => {
   const experiences = [
     {
       company: "ASHDOWNX",
-      role: t.experience.role_ashdown,
-      period: `Sept 2022 - ${t.experience.current}`,
-      missions: t.experience.missions_ashdown,
-      tech: ["AngularJS", "ReactJS", "NextJS", "Python", "Figma"]
+      role: t.experience.role_designer,
+      period: `${t.experience.periods?.designer} - ${t.experience.current}`,
+      missions: t.experience.missions_designer,
+      tech: ["Figma", "Adobe XD", "UI/UX", "Design Systems", "Prototyping"]
+    },
+    {
+      company: "Le Vibe Coding",
+      role: t.experience.role_mobile,
+      period: `${t.experience.periods?.mobile} - ${t.experience.current}`,
+      missions: t.experience.missions_mobile,
+      tech: ["React Native", "Flutter", "Firebase", "REST APIs"]
+    },
+    {
+      company: "ASHDOWNX",
+      role: t.experience.role_frontend,
+      period: `${t.experience.periods?.frontend} - ${t.experience.current}`,
+      missions: t.experience.missions_frontend,
+      tech: ["AngularJS", "ReactJS", "NextJS", "TypeScript", "Python"]
     },
     {
       company: "SERDI Informatique",
       role: t.experience.role_serdi,
-      period: "Juin 2022 - Août 2022",
+      period: t.experience.periods?.serdi || "Juin 2022 - Août 2022",
       missions: t.experience.missions_serdi,
       tech: ["JavaScript", "Laravel", "MySQL", "UML"]
     }

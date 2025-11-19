@@ -24,6 +24,9 @@ const Project = () => {
           <ProjectCard 
             title="Palabre AI"
             description={t.projects.palabre.desc}
+            imageSrc="/palabreimg.webp"
+            logoSrc="/palabre-logo.png"
+            category={t.projects.categories?.ai_literature}
             projectUrl="https://app.palabre.ai/app/dashboard"
             themeColor="purple"
             details={{
@@ -39,6 +42,9 @@ const Project = () => {
           <ProjectCard 
             title="Gestion des Réservations (MINPOSTEL)"
             description={t.projects.minpostel.desc}
+            imageSrc="/minpostel.png"
+            logoSrc="/minpostel-logo.jpg"
+            category={t.projects.categories?.admin_management}
             projectUrl="#"
             themeColor="cyan"
             details={{

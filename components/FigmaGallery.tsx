@@ -3,17 +3,30 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Figma, ArrowUpRight } from 'lucide-react';
+import Image from 'next/image';
 import { useLanguage } from '@/context/LanguageContext';
 
 const FigmaGallery = () => {
   const { t } = useLanguage();
   
-  // Placeholder data - User should replace images
   const designs = [
-    { title: "Dashboard Analytics", color: "bg-blue-500/20" },
-    { title: "Mobile App UI", color: "bg-purple-500/20" },
-    { title: "E-commerce Design", color: "bg-orange-500/20" },
-    { title: "Design System", color: "bg-green-500/20" }
+    { 
+      title: t.projects.figma_designs?.tontine || "Dashboard Tontine",
+      image: "/figma-tontine-dashboard.jpg",
+      color: "bg-orange-500/20"
+    },
+    { 
+      title: t.projects.figma_designs?.mobile || "Mobile App UI",
+      color: "bg-purple-500/20" 
+    },
+    { 
+      title: t.projects.figma_designs?.ecommerce || "E-commerce Design",
+      color: "bg-blue-500/20" 
+    },
+    { 
+      title: t.projects.figma_designs?.design_system || "Design System",
+      color: "bg-green-500/20" 
+    }
   ];
 
   return (
@@ -32,16 +45,33 @@ const FigmaGallery = () => {
             whileHover={{ y: -5 }}
             className="group relative aspect-[4/3] rounded-2xl overflow-hidden bg-card border border-border cursor-pointer"
           >
-            {/* Placeholder Visual */}
-            <div className={`absolute inset-0 ${design.color} opacity-50 group-hover:opacity-70 transition-opacity`} />
-            <div className="absolute inset-0 flex items-center justify-center">
-              <span className="text-white/20 font-bold text-4xl group-hover:scale-110 transition-transform duration-500">UI</span>
-            </div>
+            {design.image ? (
+              <>
+                {/* Real Image */}
+                <Image 
+                  src={design.image} 
+                  alt={design.title} 
+                  fill 
+                  className="object-cover transition-transform duration-700 group-hover:scale-110" 
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                />
+                {/* Overlay on hover */}
+                <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              </>
+            ) : (
+              <>
+                {/* Placeholder */}
+                <div className={`absolute inset-0 ${design.color} opacity-50 group-hover:opacity-70 transition-opacity`} />
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <span className="text-white/20 font-bold text-4xl group-hover:scale-110 transition-transform duration-500">UI</span>
+                </div>
+              </>
+            )}
 
             {/* Overlay Content */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
+            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
               <div className="flex justify-between items-end">
-                <span className="text-white font-medium">{design.title}</span>
+                <span className="text-white font-medium text-sm">{design.title}</span>
                 <div className="p-2 bg-white/10 rounded-full backdrop-blur-sm">
                   <ArrowUpRight size={16} className="text-white" />
                 </div>

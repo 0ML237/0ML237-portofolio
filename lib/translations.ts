@@ -18,19 +18,45 @@ export const translations = {
         experience: {
             title: "Expérience Professionnelle",
             current: "Présent",
-            role_ashdown: "Développeur Frontend & Concepteur Web",
+            role_designer: "Web Designer",
+            role_frontend: "Développeur Frontend",
+            role_mobile: "Développeur Mobile",
             role_serdi: "Stage en Développement Web",
-            missions_ashdown: [
+            missions_designer: [
+                "Conception de maquettes et prototypes UI/UX intuitifs dans Figma.",
+                "Création de design systems complets et cohérents.",
+                "Design d'interfaces web modernes et responsive.",
+                "Collaboration avec les développeurs pour l'intégration des designs."
+            ],
+            missions_frontend: [
                 "Développement d'applications web de haute qualité avec AngularJS, ReactJS et NextJS.",
                 "Intégration des APIs avec les développeurs backend (utilisant Python Django REST Framework).",
-                "Conception de maquettes et prototypes UI/UX intuitifs dans Figma.",
-                "Optimisation des applications pour la vitesse et l'évolutivité."
+                "Optimisation des applications pour la vitesse et l'évolutivité.",
+                "Implémentation de tests unitaires et d'intégration."
+            ],
+            missions_mobile: [
+                "Développement d'applications mobiles cross-platform.",
+                "Conception et implémentation d'interfaces utilisateur mobiles.",
+                "Optimisation des performances pour mobile.",
+                "Intégration d'APIs REST et services backend."
             ],
             missions_serdi: [
                 "Développement d'applications web de gestion commerciale (stocks et employés).",
                 "Utilisation de JavaScript, Laravel, Laravel Livewire et MySQL.",
                 "Conception de schémas de base de données en utilisant UML et PowerAMC."
-            ]
+            ],
+            months: {
+                nov: "Nov",
+                june: "Juin",
+                sept: "Sept",
+                aug: "Août"
+            },
+            periods: {
+                designer: "Nov 2024",
+                mobile: "Juin 2024",
+                frontend: "Sept 2022",
+                serdi: "Juin 2022 - Août 2022"
+            }
         },
         skills: {
             title: "Compétences Techniques",
@@ -50,9 +76,19 @@ export const translations = {
             details: "Voir les détails",
             figma_title: "Maquettes & Prototypes Figma",
             figma_link: "Voir tout mon portfolio Figma",
+            figma_designs: {
+                tontine: "Dashboard Tontine - Gestion de tontines",
+                mobile: "Interface Application Mobile",
+                ecommerce: "Design E-commerce",
+                design_system: "Système de Design"
+            },
+            categories: {
+                ai_literature: "Intelligence Artificielle & Littérature",
+                admin_management: "Gestion Administrative & Réservations"
+            },
             palabre: {
                 desc: "Plateforme innovante de génération et d'exploration littéraire assistée par Intelligence Artificielle. Elle permet aux auteurs et passionnés de créer, structurer et enrichir leurs récits grâce à des algorithmes avancés de traitement du langage.",
-                role: "Lead Frontend Developer & UI Designer. Conception de l'architecture frontend, intégration des modèles d'IA via API, et design du système de composants.",
+                role: "Développeur Frontend & Web Designer. Intégration complète du dashboard, développement de la boutique (shop), et conception de A à Z du site web vitrine connecté à l'application web.",
                 challenges: [
                     "Gestion d'états complexes pour l'éditeur de texte collaboratif.",
                     "Optimisation des temps de réponse des générations d'IA (Streaming).",
@@ -86,6 +122,14 @@ export const translations = {
                 }
             ]
         },
+        social: {
+            title: "Suivez-moi",
+            subtitle: "Connectons-nous sur les réseaux sociaux",
+            linkedin: "LinkedIn",
+            github: "GitHub",
+            facebook: "Facebook",
+            instagram: "Instagram"
+        },
         footer: {
             designed: "Conçu & Développé par Marcus Gide TEMGOUA KIADJEU",
             rights: "Tous droits réservés"
@@ -110,19 +154,45 @@ export const translations = {
         experience: {
             title: "Professional Experience",
             current: "Present",
-            role_ashdown: "Frontend Developer & Web Designer",
+            role_designer: "Web Designer",
+            role_frontend: "Frontend Developer",
+            role_mobile: "Mobile Developer",
             role_serdi: "Web Development Intern",
-            missions_ashdown: [
+            missions_designer: [
+                "Design of intuitive UI/UX mockups and prototypes in Figma.",
+                "Creation of complete and consistent design systems.",
+                "Design of modern and responsive web interfaces.",
+                "Collaboration with developers for design implementation."
+            ],
+            missions_frontend: [
                 "Development of high-quality web applications with AngularJS, ReactJS, and NextJS.",
                 "API integration with backend developers (using Python Django REST Framework).",
-                "Design of intuitive UI/UX mockups and prototypes in Figma.",
-                "Optimization of applications for speed and scalability."
+                "Optimization of applications for speed and scalability.",
+                "Implementation of unit and integration tests."
+            ],
+            missions_mobile: [
+                "Development of cross-platform mobile applications.",
+                "Design and implementation of mobile user interfaces.",
+                "Performance optimization for mobile.",
+                "Integration of REST APIs and backend services."
             ],
             missions_serdi: [
                 "Development of commercial management web applications (inventory and employees).",
                 "Use of JavaScript, Laravel, Laravel Livewire, and MySQL.",
                 "Database schema design using UML and PowerAMC."
-            ]
+            ],
+            months: {
+                nov: "Nov",
+                june: "June",
+                sept: "Sept",
+                aug: "Aug"
+            },
+            periods: {
+                designer: "Nov 2024",
+                mobile: "June 2024",
+                frontend: "Sept 2022",
+                serdi: "June 2022 - Aug 2022"
+            }
         },
         skills: {
             title: "Technical Skills",
@@ -142,9 +212,19 @@ export const translations = {
             details: "View Details",
             figma_title: "Figma Mockups & Prototypes",
             figma_link: "View full Figma portfolio",
+            figma_designs: {
+                tontine: "Tontine Dashboard - Tontine Management",
+                mobile: "Mobile App Interface",
+                ecommerce: "E-commerce Design",
+                design_system: "Design System"
+            },
+            categories: {
+                ai_literature: "Artificial Intelligence & Literature",
+                admin_management: "Administrative & Reservation Management"
+            },
             palabre: {
                 desc: "Innovative platform for AI-assisted literary generation and exploration. It allows authors and enthusiasts to create, structure, and enrich their stories using advanced language processing algorithms.",
-                role: "Lead Frontend Developer & UI Designer. Frontend architecture design, AI model integration via API, and component system design.",
+                role: "Frontend Developer & Web Designer. Complete dashboard integration, shop development, and end-to-end design of the showcase website connected to the web application.",
                 challenges: [
                     "Complex state management for the collaborative text editor.",
                     "Optimization of AI generation response times (Streaming).",
@@ -177,6 +257,14 @@ export const translations = {
                     school: "Nkolbisson Technical High School, Yaoundé"
                 }
             ]
+        },
+        social: {
+            title: "Follow Me",
+            subtitle: "Let's connect on social media",
+            linkedin: "LinkedIn",
+            github: "GitHub",
+            facebook: "Facebook",
+            instagram: "Instagram"
         },
         footer: {
             designed: "Designed & Developed by Marcus Gide TEMGOUA KIADJEU",

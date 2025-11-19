@@ -16,6 +16,8 @@ interface ProjectCardProps {
   title: string;
   description: string;
   imageSrc?: string;
+  logoSrc?: string;
+  category?: string;
   projectUrl: string;
   details: ProjectDetails;
   themeColor?: string; // e.g., "purple"
@@ -24,7 +26,9 @@ interface ProjectCardProps {
 const ProjectCard = ({
   title,
   description,
-  imageSrc = "/palabre-placeholder.png", // Default placeholder
+  imageSrc,
+  logoSrc,
+  category,
   projectUrl,
   details,
   themeColor = "purple"
@@ -52,10 +56,19 @@ const ProjectCard = ({
       <div className="flex flex-col md:flex-row">
         {/* Image Section */}
         <div className="w-full md:w-2/5 h-64 md:h-auto relative overflow-hidden bg-black/20">
-          {/* Placeholder for actual image */}
-          <div className="absolute inset-0 flex items-center justify-center text-gray-600 bg-gradient-to-br from-card to-black">
-             <span className="text-sm font-mono">Image du Projet</span>
-          </div>
+          {imageSrc ? (
+            <Image 
+              src={imageSrc} 
+              alt={title} 
+              fill 
+              className="object-cover transition-transform duration-700 group-hover:scale-105" 
+              sizes="(max-width: 768px) 100vw, 40vw"
+            />
+          ) : (
+            <div className="absolute inset-0 flex items-center justify-center text-gray-600 bg-gradient-to-br from-card to-black">
+              <span className="text-sm font-mono">Image du Projet</span>
+            </div>
+          )}
           
           {/* Overlay Gradient */}
           <div className="absolute inset-0 bg-gradient-to-t from-card via-transparent to-transparent md:bg-gradient-to-r" />
@@ -67,14 +80,28 @@ const ProjectCard = ({
             <div className="flex justify-between items-start mb-4">
               <div>
                 <h3 className={`text-3xl font-bold text-foreground mb-1 tracking-tight`}>{title}</h3>
-                <span className={`text-xs font-mono uppercase tracking-wider ${accentColor} opacity-80`}>
-                  Intelligence Artificielle & Littérature
-                </span>
+                {category && (
+                  <span className={`text-xs font-mono uppercase tracking-wider ${accentColor} opacity-80`}>
+                    {category}
+                  </span>
+                )}
               </div>
-              {/* Logo Placeholder */}
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center shadow-lg">
-                <span className="text-white font-bold text-lg">P</span>
-              </div>
+              {/* Logo */}
+              {logoSrc ? (
+                <div className="w-16 h-16 rounded-xl bg-white p-2 flex items-center justify-center shadow-lg overflow-hidden">
+                  <Image 
+                    src={logoSrc} 
+                    alt={`${title} logo`} 
+                    width={64} 
+                    height={64} 
+                    className="object-contain"
+                  />
+                </div>
+              ) : (
+                <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center shadow-lg">
+                  <span className="text-white font-bold text-lg">{title.charAt(0)}</span>
+                </div>
+              )}
             </div>
 
             <p className="text-gray-400 leading-relaxed mb-6">
