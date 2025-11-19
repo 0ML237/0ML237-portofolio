@@ -12,6 +12,7 @@ export const translations = {
             role: "Développeur Frontend & UI Designer",
             description: "Création d'expériences numériques <span class='text-primary font-semibold'>immersives</span> et <span class='text-secondary font-semibold'>performantes</span>.",
             cta_projects: "Voir mes projets",
+            resume: "Télécharger CV",
             scroll: "Scroll"
         },
         experience: {
@@ -103,6 +104,7 @@ export const translations = {
             role: "Frontend Developer & UI Designer",
             description: "Creating <span class='text-primary font-semibold'>immersive</span> and <span class='text-secondary font-semibold'>performant</span> digital experiences.",
             cta_projects: "View My Projects",
+            resume: "Download Resume",
             scroll: "Scroll"
         },
         experience: {

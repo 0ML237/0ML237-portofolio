@@ -2,7 +2,7 @@
 
 import React, { useEffect } from 'react';
 import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion';
-import { Code2, Palette, Terminal, Monitor, Smartphone, Database, Layers, Cpu } from 'lucide-react';
+import { Code2, Palette, Terminal, Monitor, Smartphone, Database, Layers, Cpu, Download } from 'lucide-react';
 import { useLanguage } from '@/context/LanguageContext';
 
 const Hero = () => {
@@ -133,6 +133,16 @@ const Hero = () => {
           </a>
           
           <a 
+            href="/resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-8 py-4 bg-white/5 border border-white/10 text-foreground rounded-full hover:bg-white/10 transition-all flex items-center gap-2"
+          >
+            <Download size={18} />
+            <span>{t.hero.resume}</span>
+          </a>
+
+          <a 
             href="mailto:marcustemgoua2@gmail.com"
             className="px-8 py-4 bg-white/5 border border-white/10 text-foreground rounded-full hover:bg-white/10 transition-all"
           >
@@ -160,5 +170,3 @@ const Hero = () => {
 };
 
 export default Hero;
-
-
